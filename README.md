@@ -65,7 +65,6 @@ This project demonstrates:
 
 - Avatar is stored temporarily as an object URL; memory is released when the ticket is downloaded
 
-- Form data is stored in sessionStorage, so it persists only until the tab is closed
 
 ## 📜 License
 
