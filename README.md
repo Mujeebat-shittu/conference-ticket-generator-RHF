@@ -1,71 +1,121 @@
-## 🎟 Ticket Generator Webpage
+# 🎟️ Coding Conference Ticket Generator
 
-A React + TypeScript web application that allows users to upload an avatar, enter their personal details, and generate a personalized event ticket. Users can download their ticket as a PNG image with custom styling, including background color, text color, and rounded corners, without exposing sensitive data in the URL.
+A responsive React + TypeScript application that allows users to register for a fictional coding conference and receive a personalized digital ticket. Built with structured state management, file handling, and dynamic routing.
 
-## 📝 Short Description
+---
 
-This project demonstrates:
+## 🚀 Live Demo  
+👉 **[View Live Project](https://conference-ticket-generator-rhf.netlify.app/)**  
+👉 **[GitHub Repository](https://github.com/Mujeebat-shittu/conference-ticket-generator-RHF)**  
 
-- React Hook Form for form handling and validation
+---
 
-- File uploads (avatar) with validation for type and size
+## 📌 Features
 
-- React Router for navigation between form and ticket display
+### 🎨 Modern UI & UX  
+- Fully responsive and accessible design  
+- Styled with Tailwind CSS  
+- Clean, reusable component structure  
+
+### 🧠 Structured State Management  
+- Managed form state using `React Hook Form`  
+- Centralized error handling reducer  
+- Predictable and maintainable architecture  
+
+### 🖼️ Avatar Upload & Validation  
+- Upload a profile image (JPG, PNG, WEBP)  
+- Validates file type and file size  
+- Real-time avatar preview  
+- Stored as a `File` object for safer handling  
+
+### 🧾 Dynamic Ticket Generation  
+- User data passed securely via React Router `navigate` state  
+- Personalized ticket layout including avatar, name, GitHub username, and email  
+- Clean, centered typography and visual hierarchy  
+
+### 📥 Downloadable Ticket  
+- Integrated `html2canvas` to export the ticket  
+- Ticket is downloadable as a PNG file  
+- Adjustable resolution and scaling  
+
+---
+
+## 🛠️ Tech Stack
+
+- **React (Vite)**
+- **TypeScript**
+- **Tailwind CSS**
+- **React Router**
+- **React Hook Form**
+- **html2canvas**
+
+---
+
+## 📁 Folder Structure
+src/
+ ├── components/
+ ├── assets/
+ ├── App.tsx
+ ├── main.tsx
+ └── index.css
 
 
-- html2canvas to capture and download the ticket as an image
+---
 
-## ⚡ Features
+## ▶️ Getting Started
 
-- Upload an avatar image (JPG, PNG, WEBP, max 2MB)
+### 1. Clone the repository
+```bash
+git clone https://github.com/Mujeebat-shittu/coding-ticket-generator.git
+cd coding-ticket-generator
+```
 
-- Fill in personal information (Full name, Email, GitHub username)
+### 2. Install dependencies
+```bash
+npm install
+```
 
-- Form validation with error messages using React Hook Form
+### 3. Run the project
+```bash
+npm install
+```
 
-- Generate a custom event ticket with avatar, name, username, and event details
+## 🧩 How It Works
+1. User fills the form
+Uploads avatar
 
-- Download the ticket as a PNG image with correct styling
+Inputs name, email, and GitHub username
 
-- Data security: form data does not appear in the URL
+2. React Hook Form updates form state
+Validates input
 
-- Responsive design with Tailwind CSS
+Stores the avatar as a File
 
-## 🛠 Technology Stack
+3. On submit
+Creates a blob URL for the avatar
 
-- React
+Navigates to /ticket with state
 
-- TypeScript
+Renders a personalized ticket layout
 
-- React Hook Form
+4. User downloads ticket
+Ticket DOM is converted to canvas using html2canvas
 
-- React Router v6
-
-- Tailwind CSS
-
-- html2canvas
-
+Canvas is exported as a PNG
 
 
-## 🖼 Usage
+## 📌 Lessons Learned
 
-- Fill in the form fields (Full Name, Email, GitHub username)
+- Implementing *React Hook Form* for complex form flows
 
-- Upload an avatar image
+- Validating and safely handling file uploads
 
-- Click Generate My Ticket
+- Passing data securely between pages using React Router
 
-- Review the ticket on the next page
+- Working with DOM-to-image rendering tools
 
-- Click Download Ticket to save it as PNG
-
-## ⚠️ Notes
-
-- Ticket image is generated using html2canvas — ensure images are fully loaded before downloading
-
-- Avatar is stored temporarily as an object URL; memory is released when the ticket is downloaded
-
+- Designing scalable layouts with Tailwind CSS
 
 ## 📜 License
 
-This project is open source and free to use.
+This project is open-source under the MIT License.
