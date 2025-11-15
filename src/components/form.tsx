@@ -54,7 +54,7 @@ function Form() {
 
     return (
         <>
-            <section className="flex items-center justify-center flex-col h-screen mx-8 my-10 l p-4 text-white">
+            <section className="flex items-center justify-center flex-col min-h-screen mx-8 my-10 l p-4 text-white">
 
                 <img src={Logo} alt="Logo" className='mt-8' />
                 <h1 className="text-4xl font-semibold text-center py-2">Your Journey to Coding Conf 2025 Starts Here!</h1>
@@ -127,9 +127,10 @@ function Form() {
                             id='fullname'
                             type="text"
                             placeholder='John Doe'
+                            className='bg-(--neutral-900)'
                         />
                         {errors.fullname && (
-                            <p className="text-orange-400">{`${errors.fullname.message}`}</p>
+                            <p className="text-(--orange-500)">{`${errors.fullname.message}`}</p>
                         )}
                     </div>
 
@@ -147,7 +148,7 @@ function Form() {
 
                         />
                         {errors.email && (
-                            <p className="text-orange-400">{`${errors.email.message}`}</p>
+                            <p className="text-(--orange-500)">{`${errors.email.message}`}</p>
                         )}
                     </div>
 
@@ -164,7 +165,7 @@ function Form() {
                         />
                     </div>
                     {errors.username && (
-                        <p className="text-orange-400">{`${errors.username.message}`}</p>
+                        <p className="text-(--orange-500)">{`${errors.username.message}`}</p>
                     )}
 
 
